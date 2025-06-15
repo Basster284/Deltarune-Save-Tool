@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection.Emit;
+
 namespace Undertale_Saver_Tool
 {
     public partial class Form1 : Form
@@ -28,8 +29,6 @@ namespace Undertale_Saver_Tool
             panel1.Visible = false;
             textBox2.Text = Undertale_Saver_Tool.Properties.Settings.Default.save_path;
 
-
-
             textBox3.Text = Undertale_Saver_Tool.Properties.Settings.Default.Undertale_path;
 
             if (File.Exists(textBox2.Text + @"\data.txt") != false)
@@ -38,30 +37,9 @@ namespace Undertale_Saver_Tool
                 var lines = File.ReadAllLines(textBox2.Text + @"\data.txt");
                 listBox1.Items.AddRange(lines);
             }
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -88,19 +66,10 @@ namespace Undertale_Saver_Tool
             Undertale_Saver_Tool.Properties.Settings.Default.Undertale_path = textBox2.Text;
             Undertale_Saver_Tool.Properties.Settings.Default.Save();
 
-            if (File.Exists(textBox2.Text + @"\data.txt"))
-            {
-
-            }
-            else
+            if (!File.Exists(textBox2.Text + @"\data.txt"))
             {
                 File.WriteAllText(textBox2.Text + @"\data.txt", "");
             }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -113,44 +82,9 @@ namespace Undertale_Saver_Tool
             Undertale_Saver_Tool.Properties.Settings.Default.Save();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button9_Click(object sender, EventArgs e)
         {
             Process.Start(textBox3.Text);
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -191,8 +125,6 @@ namespace Undertale_Saver_Tool
                 textBox1.Text = "";
                 label2.Text = "Created!";
 
-
-
                 var items = listBox1.Items.Cast<string>().ToArray();
                 File.WriteAllLines(textBox2.Text + @"\data.txt", items);
             }
@@ -214,7 +146,6 @@ namespace Undertale_Saver_Tool
 
             File.Delete(System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\UNDERTALE\undertale.ini");
             File.Copy(textBox2.Text + @"\" + listBox1.SelectedItem + @"\undertale.ini", System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\UNDERTALE\undertale.ini");
-
 
             label2.Text = "Loaded!";
         }
