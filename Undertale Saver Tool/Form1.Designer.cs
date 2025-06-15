@@ -80,7 +80,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(413, 20);
             this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            
             // 
             // button11
             // 
@@ -98,7 +98,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(413, 20);
             this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            
             // 
             // button10
             // 
@@ -108,7 +108,7 @@
             this.button10.TabIndex = 7;
             this.button10.Text = "OK";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            
             // 
             // label4
             // 
@@ -118,7 +118,6 @@
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Undertale path";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button5
             // 
@@ -138,7 +137,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label6
             // 
@@ -152,7 +150,6 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "The program is in beta testing! Therefore, you are responsible \r\nfor any malfunct" +
     "ions that may occur during operation.";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel3
             // 
@@ -164,7 +161,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(462, 86);
             this.panel3.TabIndex = 23;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            
             // 
             // button9
             // 
@@ -199,7 +196,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(462, 86);
             this.panel2.TabIndex = 22;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            
             // 
             // button12
             // 
@@ -229,7 +226,6 @@
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Saves path";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
@@ -240,7 +236,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(462, 86);
             this.panel1.TabIndex = 21;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox1
             // 
@@ -258,7 +253,7 @@
             this.label5.Size = new System.Drawing.Size(182, 16);
             this.label5.TabIndex = 27;
             this.label5.Text = "Programm by Adil-Master";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            
             // 
             // button7
             // 
@@ -314,7 +309,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(266, 345);
             this.listBox1.TabIndex = 16;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+           
             // 
             // button4
             // 
