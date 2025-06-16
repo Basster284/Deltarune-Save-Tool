@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection.Emit;
+using System.Globalization;
+using System.Threading;
 
 namespace Undertale_Saver_Tool
 {
@@ -200,6 +202,20 @@ namespace Undertale_Saver_Tool
                 panel1.Show();
                 import = true;
             }
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Undertale_Saver_Tool.Properties.Settings.Default.Language = "en-US";
+            Undertale_Saver_Tool.Properties.Settings.Default.Save();
+            Application.Restart();
+        }
+
+        private void русскийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Undertale_Saver_Tool.Properties.Settings.Default.Language = "ru";
+            Undertale_Saver_Tool.Properties.Settings.Default.Save();
+            Application.Restart();
         }
     }
 }
